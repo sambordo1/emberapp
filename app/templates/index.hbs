@@ -1,0 +1,34 @@
+<div class="nav">
+    <ul>
+        <li><LinkTo @route="index">Proposal</LinkTo></li>
+        <li><LinkTo @route="arch-diagram">Architecture Diagram</LinkTo></li>
+        <li><LinkTo @route="workflow">Workflow</LinkTo></li>
+        <li><LinkTo @route="cost-analysis">Cost Analysis</LinkTo></li>
+    </ul>
+</div>
+<h1 class="title-intro">New Architecture Exploration</h1>
+<div class="intro">
+    <h2 class="intro-section">Proposal</h2>
+    <div class="intro-text">
+    <p>We use a reverse proxy architecture. This means a public facing server proxies requests to our API server.
+        <br> Instead, we could use AWS serverless resources to replace 
+        <br> (1) Apache HTTPD for serving web-server 
+        <br> (2)Apache HTTPD for proxying API requests to app-server or giles </p>
+    <p>Overtime, we believe this will reduce maintenance costs due to the self-managed serverless nature of AWS resources</p>
+    </div>
+    <h2 class="intro-section">Resources / Technologies Required</h2>
+    <div class="intro-text">
+    <h3>Terraform</h3>
+    <p>Open source infrastructure as code (IaC) software tool that allows programmattic provision of the cloud resources an application requires to run. </p>
+    <h3>AWS S3 Bucket</h3>
+    <p>Cloud Object storage service that offers industry-leading scalability, data availability, security, and performance</p>
+    <h3>AWS CloudFront</h3>
+    <p>A CDN (Content Delivery Network) globally distributed and offered by Amazon that helps users to request data quickly and with a low-latency network.
+    <br>It is primarily used to deliver static content like .css, .js, .html, and multimedia files.
+    <br>To guarantee the best performance with the lowest delay, when a user request content served with CloudFront, it finds the geographically nearest edge location.</p>
+    <h3>AWS Route 53</h3>
+    <p> A scalable and highly available Domain Name System service</p>
+    <h3>AWS Certificate Manager</h3>
+    <p>Manages the renewal and deployment of public certificates used with ACM-integrated services, including Amazon CloudFront</p>
+    </div>
+</div>

@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic);
+
+/**
+ * Base Elements
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+span,
+a,
+button {
+  font-family: 'Lato', 'Open Sans', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  background: #f3f3f3;
+}
+
+a {
+  color: #016aba;
+  text-decoration: none;
+}
+
+button {
+  font-size: 100%;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/*
+ * Proposal Page
+ */
+
+ .intro {
+    background-color: #F8F8F8;
+    padding: 20px;
+    margin: 20px;
+    font-size: 20px;
+ }
+ .title-intro {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #151d54;
+  color:#f3f3f3;
+  padding: 20px;
+}
+.intro-section {
+  background-color: #151d54;
+  outline: 2px solid #111111;
+  color:#f3f3f3;
+  padding: 10px;
+  margin: 10px;
+}
+.intro-text {
+  padding: 10px;
+  margin: 10px;
+}
+
+/*
+ * Diagram Page
+ */
+ .diagram {
+    background-color: #F8F8F8;
+    padding: 20px;
+    margin: 20px;
+    outline: 5px solid #97798D;
+ }
+ .diagram img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 2px;
+ }
+
+ /*
+ * Navigation Bar
+ */
+ .nav {
+    background-color: #F8F8F8;
+    padding: 5px;
+    margin: 5px;
+ }
+ .nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+    outline: 10px solid #111111;
+
+ }
+ .nav li {
+    float: left;
+    
+  }
+  .nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+  li a:hover {
+    background-color: #111111;
+  }
+
+  /* Innovu Colors */
+  /* #111111 
+  #333333
+  #4892C7
+  #F8F8F8
+  #42B49F
+  #97798D */
