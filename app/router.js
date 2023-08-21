@@ -10,4 +10,5 @@ Router.map(function () {
   this.route('arch-diagram');
   this.route('workflow');
   this.route('cost-analysis');
+  this.route('api-gateway');
 });

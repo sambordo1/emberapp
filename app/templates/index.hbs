@@ -4,19 +4,43 @@
         <li><LinkTo @route="arch-diagram">Architecture Diagram</LinkTo></li>
         <li><LinkTo @route="workflow">Workflow</LinkTo></li>
         <li><LinkTo @route="cost-analysis">Cost Analysis</LinkTo></li>
+        <li><LinkTo @route="api-gateway">API Gateway</LinkTo></li>
     </ul>
 </div>
 <h1 class="title-intro">New Architecture Exploration</h1>
 <div class="intro">
     <h2 class="intro-section">Proposal</h2>
     <div class="intro-text">
-    <p>We use a reverse proxy architecture. This means a public facing server proxies requests to our API server.
-        <br> Instead, we could use AWS serverless resources to replace 
-        <br> (1) Apache HTTPD for serving web-server 
-        <br> (2)Apache HTTPD for proxying API requests to app-server or giles </p>
-    <p>Overtime, we believe this will reduce maintenance costs due to the self-managed serverless nature of AWS resources</p>
+        <h3 class="arch-prop">Current Architecture</h3>
+        <h4>Reverse Proxy Architecture</h4><br>
+        <div class="tabbed">
+            <ul>
+                <li>Public facing server proxies requests to our API server </li>
+            <li>Apache HTTPD serves web-server HTML, etc. Apache HTTPD proxies API requests to app-server or giles</li>
+            <li>This architecture has a number of benefits. Over time, however, it introduces maintenance costs</li>
+            </ul>
+        </div><br>
+        <h3 class="arch-prop">Proposed Architecture</h3>
+        <h4>AWS API Gateway as a Reverse Proxy for an S3 / Cloudfront Web-server </h4><br>
+        <div class="tabbed">
+        <ul>
+            <li>Terraform scripts for easy cloud planning and deploy/destroy strategy </li>
+            <li>S3 static website to host web-server Ember app</li>
+            <li>AWS Cloudfront for improved s3 web-server performance using edge locations</li>
+            <li>AWS API Gateway instead of Apache reverse proxy setup </li>
+        </ul>
+        </div><br>
+        <h4>Potential Improvements</h4>
+        <div class="tabbed">
+            <ul>
+                <li>Reduce maintenance costs due to the self-managed serverless nature of AWS resources</li>
+                <li>Greater access to AWs monitoring/observability tools and integrations</li>
+                <li>Potential to move to cloud best-practices for deployment and releases due to easier replication and teardown of application (blue-green deployment)</li>
+                <li>Speed and reliability of s3</li>
+            </ul>
+        </div>
     </div>
-    <h2 class="intro-section">Resources / Technologies Required</h2>
+    <h2 class="intro-section">Resources / Technologies Involved</h2>
     <div class="intro-text">
     <h3>Terraform</h3>
     <p>Open source infrastructure as code (IaC) software tool that allows programmattic provision of the cloud resources an application requires to run. </p>
@@ -26,6 +50,9 @@
     <p>A CDN (Content Delivery Network) globally distributed and offered by Amazon that helps users to request data quickly and with a low-latency network.
     <br>It is primarily used to deliver static content like .css, .js, .html, and multimedia files.
     <br>To guarantee the best performance with the lowest delay, when a user request content served with CloudFront, it finds the geographically nearest edge location.</p>
+    <h3>AWS API Gateway</h3>
+    <p> fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. It handles all the tasks involved in accepting 
+        and processing up to hundreds of thousands of concurrent API calls, including traffic management, authorization and access control, monitoring, and API version management.</p>
     <h3>AWS Route 53</h3>
     <p> A scalable and highly available Domain Name System service</p>
     <h3>AWS Certificate Manager</h3>

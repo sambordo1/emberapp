@@ -1,0 +1,38 @@
+<div class="nav">
+    <ul>
+        <li><LinkTo @route="index">Proposal</LinkTo></li>
+        <li><LinkTo @route="arch-diagram">Architecture Diagram</LinkTo></li>
+        <li><LinkTo @route="workflow">Workflow</LinkTo></li>
+        <li><LinkTo @route="cost-analysis">Cost Analysis</LinkTo></li>
+        <li><LinkTo @route="api-gateway">API Gateway</LinkTo></li>
+    </ul>
+</div>
+<h2 class="intro-section">Demo of API Gateway and Dynamo DB</h2>
+<div class="intro-text">
+    <h2>Classic Authors API</h2>
+    <p>Input Shakespeare, Twain, or Austen</p>
+</div>
+
+<input type="text" id="inputBox" onkeydown="handleKeyDown(event)">
+<button onclick="makeAPICall()">Submit</button>
+<div id="output"></div>
+
+<script>
+
+  function handleKeyDown(event) {
+    if (event.key === 'Enter') {
+      makeAPICall();
+    }
+  }
+  function makeAPICall() {
+    const input = document.getElementById("inputBox").value;
+    fetch(`https://api.quotestrivia.com/classicAuthorApp?authorName=${input}`)
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("output").innerText = data;
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }
+</script>

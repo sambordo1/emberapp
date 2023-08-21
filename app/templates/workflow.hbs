@@ -4,6 +4,7 @@
         <li><LinkTo @route="arch-diagram">Architecture Diagram</LinkTo></li>
         <li><LinkTo @route="workflow">Workflow</LinkTo></li>
         <li><LinkTo @route="cost-analysis">Cost Analysis</LinkTo></li>
+        <li><LinkTo @route="api-gateway">API Gateway</LinkTo></li>
     </ul>
 </div>
 <h2 class="intro-section">User Flow Diagram</h2>
@@ -11,5 +12,17 @@
         <img src="assets/workflow-diagram.png" alt="workflow Diagram">
 </div>
 <div class="intro-text">
-    <h2>Workflow Steps</h2>
+    <h2 class="arch-prop">Workflow</h2><br>
+    <h3>Updates to Cloud Infrastructure</h3><br>
+    <ol class='tabbed'>
+        <li>Define changes/additions to AWS resources</li>
+        <li>Write in terraform scripts</li>
+        <li>After approval, push to gitlab, and terraform integration will check for changes and apply to AWS account</li>
+    </ol><br>
+    <h3>Updates to Web App</h3><br>
+    <ol class='tabbed'>
+        <li>Push local changes to gitlab </li>
+        <li>After approval, changes uploaded to s3</li>
+        <li>S3 and cloudfront are updated</li>
+    </ol>
 </div>

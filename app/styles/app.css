@@ -120,6 +120,75 @@ p {
     background-color: #111111;
   }
 
+  .tabbed {
+    margin-left: 40px;
+  }
+
+  .arch-prop {
+    text-decoration: underline;
+  }
+
+/* API Gateway Page */
+
+  /* Input box styles */
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+/* Button styles */
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Output div styles */
+#output {
+  margin-top: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table header styles */
+th {
+  background-color: #f2f2f2;
+  padding: 8px;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Table row styles */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Table cell styles */
+td {
+  padding: 8px;
+}
+
+
+
   /* Innovu Colors */
   /* #111111 
   #333333

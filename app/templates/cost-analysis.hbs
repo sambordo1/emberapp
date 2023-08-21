@@ -4,16 +4,55 @@
         <li><LinkTo @route="arch-diagram">Architecture Diagram</LinkTo></li>
         <li><LinkTo @route="workflow">Workflow</LinkTo></li>
         <li><LinkTo @route="cost-analysis">Cost Analysis</LinkTo></li>
+        <li><LinkTo @route="api-gateway">API Gateway</LinkTo></li>
     </ul>
 </div>
+
 <h2 class="intro-section">Current Architecture Cost</h2>
 <div class="intro-text">
-    <h2>Infrastructure Cost</h2>
-    <h2>Maintenance Cost</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Resource</th>
+      <th>Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>apache HTTPD servers</td>
+      <td>$</td>
+    </tr>
+    <tr>
+      <td>Maintenance</td>
+      <td>$</td>
+    </tr>
+  </tbody>
+</table>
 </div>
+
+
 <h2 class="intro-section">Proposed Architecture Cost</h2>
 <div class="intro-text">
-    <h2>S3 Bucket</h2>
-    <h2>Cloudfront CDN</h2>
-    <h2>Maintenance Cost</h2>
+<table>
+  <thead>
+    <tr>
+      <th>AWS Resource</th>
+      <th>Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>s3 static website</td>
+      <td>$</td>
+    </tr>
+    <tr>
+      <td>Cloudfront CDN</td>
+      <td>$</td>
+    </tr>
+    <tr>
+      <td>API Gateway</td>
+      <td>$</td>
+    </tr>
+  </tbody>
+</table>
 </div>
