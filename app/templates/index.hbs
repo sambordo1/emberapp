@@ -5,6 +5,8 @@
         <li><LinkTo @route="workflow">Workflow</LinkTo></li>
         <li><LinkTo @route="cost-analysis">Cost Analysis</LinkTo></li>
         <li><LinkTo @route="api-gateway">API Gateway</LinkTo></li>
+        <li><LinkTo @route="further-research">Further Research</LinkTo></li>
+        <li><LinkTo @route="arch-comparison">Architecture Comparison</LinkTo></li>
     </ul>
 </div>
 <h1 class="title-intro">New Architecture Exploration</h1>
@@ -21,13 +23,16 @@
             </ul>
         </div><br>
         <h3 class="arch-prop">Proposed Architecture</h3>
-        <h4>AWS API Gateway as a Reverse Proxy for an S3 / Cloudfront Web-server </h4><br>
+        <h4>AWS API Gateway / Cloudfront as a Reverse Proxy for an S3 Web-server </h4><br>
         <div class="tabbed">
         <ul>
             <li>Terraform scripts for easy cloud planning and deploy/destroy strategy </li>
             <li>S3 static website to host web-server Ember app</li>
             <li>AWS Cloudfront for improved s3 web-server performance using edge locations</li>
-            <li>AWS API Gateway instead of Apache reverse proxy setup </li>
+            Decision between:
+            <li>Cloudfront with Application Load Balancer redirecting to FrontEnd or BackEnd (Same distribution, multiple origins, multiple behaviors)</li>
+            OR
+            <li>AWS API Gateway as the load balancer / proxy instead of Apache setup </li>
         </ul>
         </div><br>
         <h4>Potential Improvements</h4>
@@ -36,7 +41,7 @@
                 <li>Reduce maintenance costs due to the self-managed serverless nature of AWS resources</li>
                 <li>Greater access to AWs monitoring/observability tools and integrations</li>
                 <li>Potential to move to cloud best-practices for deployment and releases due to easier replication and teardown of application (blue-green deployment)</li>
-                <li>Speed and reliability of s3</li>
+                <li>Speed and reliability of s3 and Cloudfront CDN</li>
             </ul>
         </div>
     </div>

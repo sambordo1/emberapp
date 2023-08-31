@@ -5,6 +5,8 @@
         <li><LinkTo @route="workflow">Workflow</LinkTo></li>
         <li><LinkTo @route="cost-analysis">Cost Analysis</LinkTo></li>
         <li><LinkTo @route="api-gateway">API Gateway</LinkTo></li>
+        <li><LinkTo @route="further-research">Further Research</LinkTo></li>
+        <li><LinkTo @route="arch-comparison">Architecture Comparison</LinkTo></li>
     </ul>
 </div>
 <h2 class="intro-section">Demo of API Gateway and Dynamo DB</h2>
@@ -14,7 +16,7 @@
 </div>
 
 <input type="text" id="inputBox" onkeydown="handleKeyDown(event)">
-<button onclick="makeAPICall()">Submit</button>
+<button onclick="makeAPICall()" type="button">Submit</button>
 <div id="output"></div>
 
 <script>

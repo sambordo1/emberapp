@@ -1,0 +1,60 @@
+<div class="nav">
+    <ul>
+        <li><LinkTo @route="index">Proposal</LinkTo></li>
+        <li><LinkTo @route="arch-diagram">Architecture Diagram</LinkTo></li>
+        <li><LinkTo @route="workflow">Workflow</LinkTo></li>
+        <li><LinkTo @route="cost-analysis">Cost Analysis</LinkTo></li>
+        <li><LinkTo @route="api-gateway">API Gateway</LinkTo></li>
+        <li><LinkTo @route="further-research">Further Research</LinkTo></li>
+        <li><LinkTo @route="arch-comparison">Architecture Comparison</LinkTo></li>
+    </ul>
+</div>
+
+<h2 class="intro-section">App-server Architecture Comparison</h2>
+<div class="intro-text">
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>Architecture</th>
+        <th>Description</th>
+        <th>Scaling</th>
+        <th>Cost</th>
+        <th>Effort</th>
+        <th>Overview</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>API Gateway and Lambda back-end </td>
+        <td>Changing the entire architecture of app server by moving it to Lambda</td>
+        <td>Easy to scale up and down </td>
+        <td>Potential Cost savings due to paying only for what you use</td>
+        <td>High Effort due to completely re-architecting app-server</td>
+        <td>cost effective, highly scalable, high inital effort, increased complexity, potential performance overhead for api gateway layer</td>
+      </tr>
+      <tr>
+        <td>Application Load Balancer to Ec2 backend</td>
+        <td>Using AWS ALB to route traffic to EC2 app-server backend</td>
+        <td>Highly scalable</td>
+        <td>Pay for it even when application idle</td>
+        <td>Much less effort</td>
+        <td>not as cost effective, not as complex or powerful, less effort, highly scalable</td>
+      </tr>
+    </tbody>
+  </table><br><br>
+  <p> I am still looking intot he possible use case for lambda@edge and Cloudfront Functions. 
+    But the preliminary issue we need to solve is whether app-server could potentially be moved to lambda?</p>
+  <p> An API gateway provides an interface between the client and the microservices, while a load balancer distributes incoming requests 
+    among multiple servers or services to improve performance and availability. 
+    While they serve similar purposes, they are not interchangeable and are often used together in a microservice architecture.</p>
+</div><br>
+<h2 class="intro-section">API Gateway vs ALB</h2>
+<div class="intro-text">
+<div class="container">
+        <img src="assets/apig-vs-alb.png" alt="gateway vs alb" class="comparison-pic">
+</div>
+<div class="container">
+        <img src="assets/apig-vs-alb-uses.png" alt="gateway vs alb" class="comparison-pic">
+</div>
+</div>
+

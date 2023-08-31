@@ -11,4 +11,6 @@ Router.map(function () {
   this.route('workflow');
   this.route('cost-analysis');
   this.route('api-gateway');
+  this.route('further-research');
+  this.route('arch-comparison');
 });

@@ -1,0 +1,33 @@
+<div class="nav">
+    <ul>
+        <li><LinkTo @route="index">Proposal</LinkTo></li>
+        <li><LinkTo @route="arch-diagram">Architecture Diagram</LinkTo></li>
+        <li><LinkTo @route="workflow">Workflow</LinkTo></li>
+        <li><LinkTo @route="cost-analysis">Cost Analysis</LinkTo></li>
+        <li><LinkTo @route="api-gateway">API Gateway</LinkTo></li>
+        <li><LinkTo @route="further-research">Further Research</LinkTo></li>
+        <li><LinkTo @route="arch-comparison">Architecture Comparison</LinkTo></li>
+    </ul>
+</div>
+<div class="intro-text">
+    <h2 class="arch-prop">Questions to Answer</h2><br>
+    <h3>Cost Analysis</h3><br>
+    <ol class='tabbed'>
+        <li>Cost analysis of current setup (infrastructure and maintenance)</li>
+        <li>Cost analysis of proposed setup </li>
+        <li>Cost difference between api gateway and cloudfront vs cloudfront and application load balancer</li>
+        <li>Cost of test environment using lens software</li>
+    </ol><br>
+    <h3>Scaling analysis</h3><br>
+    <ol class='tabbed'>
+        <li>Scaling capabilities of api gateway and cloudfront</li>
+        <li>Scaling capabilities of application load balancer</li>
+        <li>Potential of s3 + lambda edge</li>
+    </ol><br>
+    <h3>Steps forward for test environment </h3><br>
+    <ol class='tabbed'>
+        <li>s3 upload of ember application</li>
+        <li>setup of cloudfront cdn</li>
+        <li>decision on app-server strategy</li>
+    </ol><br>
+</div>
