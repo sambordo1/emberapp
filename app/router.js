@@ -13,4 +13,5 @@ Router.map(function () {
   this.route('api-gateway');
   this.route('further-research');
   this.route('arch-comparison');
+  this.route('final-solution');
 });

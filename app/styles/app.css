@@ -204,6 +204,17 @@ td {
   height: 90vh;
 }
 
+.final-solution-pic {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  border: 4px solid #151d54;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 
   /* Innovu Colors */
   /* #111111 
