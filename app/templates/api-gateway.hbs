@@ -10,27 +10,6 @@
         <li><LinkTo @route="final-solution">Final Solution</LinkTo></li>
     </ul>
 </div>
-
-<h2 class="intro-section">Demo of EC2 api server through ALB</h2>
-
-<button onclick="makeAPICall()" type="button">Make API Call</button>
-<div id="output"></div>
-
-<script>
-  function makeAPICall() {
-    fetch(`http://54.87.96.196:4000/`)
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById("output").innerText = data;
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  }
-</script>
-
-
-
 <h2 class="intro-section">Demo of API Gateway and Dynamo DB</h2>
 <div class="intro-text">
     <h2>Classic Authors API</h2>

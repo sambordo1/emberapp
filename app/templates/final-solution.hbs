@@ -19,14 +19,34 @@
 <h2 class="intro-section">Resources</h2>
     <div class="intro-text">
     <h3>AWS S3 Bucket</h3>
-    <p></p>
+    <p> web-server ember application</p>
     <h3>AWS CloudFront</h3>
-    <p></p>
-    <h3>AWS API Gateway</h3>
-    <p></p>
+    <p> Distribution for improved s3 web-server performance and routing between s3 and ec2</p>
     <h3>AWS Route 53</h3>
-    <p></p>
+    <p> Domain Name System service to integrate with cloudfront</p>
     <h3>AWS Certificate Manager</h3>
-    <p></p>
+    <p> Certificate manager to integrate with cloudfront</p>
+    <h3>AWS EC2</h3>
+    <p> to host app-server</p>
+    <h3>AWS Application Load Balancer</h3>
+    <p> Set up ALB, target group for routing to api server</p>
     </div>
 </div>
+
+<h2 class="intro-section">Demo of EC2 api server through ALB</h2>
+
+<button onclick="makeAPICall2()" type="button">Make API Call</button>
+<div id="output1"></div>
+
+<script>
+  function makeAPICall2() {
+    fetch(`http://54.87.96.196:4000/`)
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("output1").innerText = data;
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }
+</script>
